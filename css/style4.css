@@ -1,0 +1,650 @@
+/*container*/
+.container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto auto auto;
+}
+
+@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+/*done*/
+
+/*nav*/
+
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	min-height: 100vh;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Montserrat';
+}
+
+a {
+	text-decoration: none;
+}
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.logo a,
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+	color: black;
+}
+
+.main-nav a {
+	color: black;
+	font-size: .99em;
+}
+
+.main-nav a:hover {
+	color: orange;
+/*	background: -webkit-linear-gradient(red, yellow, blue);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: bold;*/
+}
+
+/*inpisred from https://codepen.io/samnorton/pen/zBYMJG*/
+
+
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	background-color: transparent;
+	color: white;
+}
+
+
+/*done*/
+
+/*style underneath*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+	background-color: white;
+	font-family: "Lora";
+}
+
+p{
+	font-family: "Lora";
+	size: 20px;
+	padding: 20px;
+	line-height: 1.5;
+}
+
+h1 {
+	text-align: center;
+	padding-top: 40px;
+	font-size: 50px;
+	word-break: break-all;
+	font-family: 'Montserrat';
+}
+
+h2 {
+	font-family: 'Montserrat';
+	font-weight: 900;
+	font-size: 30px;
+	padding-top: 20px;
+	animation-name: tracking-in-expand;
+	animation-duration: 1.4s;
+}
+
+h3 {
+	font-family: 'Montserrat';
+	font-weight: bold;
+}
+
+/*.parallax{
+	word-wrap: unset;
+}*/
+
+.band-members h2{
+	text-align: center;
+}
+
+#fun p{
+	color: gray;
+}
+
+#fun h2{
+	padding-bottom: 50px;
+	text-align: right;
+}
+
+
+#albums{
+	padding: 15px;
+	margin: 15px;
+}
+
+#albums p {
+	text-align: center;
+}
+
+img{
+	width: 100%;
+}
+
+.skip a{
+	background: white;
+	left: 0;
+	padding: 6px;
+	position: absolute; 
+	top: -40px;   
+	-webkit-transition: top 1s ease-out;
+	transition: top 1s ease-out;
+	z-index: 1;
+}
+
+.skip a:focus {
+  top: 0px;
+}
+
+
+/*done*/
+
+/*contact CSS done underneath here*/
+
+
+.form {
+	font-family: 'Lora'
+    text-align: center;  
+    width: 45%; 
+    height: 400px;
+    margin: auto;
+    margin-bottom: 65px;
+    margin-top: 65px;
+}
+
+.name { 
+	font-family: 'Lora';
+	text-align: center;
+    color: black;
+    width:300px;
+    border-radius: .5em;
+  }
+
+
+.email {
+	border-radius: .5em;
+	font-family: "Lora";
+	text-align: center;
+	background-color: white;  
+	width:300px;
+    
+  }
+
+  .message { 
+  	border-radius: .5em;
+    font-family: "Lora";
+    text-align: center;
+    background-color: white;
+    width:300px;
+    height: 150px;
+  }
+
+
+  .entry{
+  	border-radius: .5em;
+    display: block;
+    margin: 30px auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: .25em; 
+  }
+
+.submit{
+	border-radius: .5em;
+	font-family: "Lora";
+	font-size: 1em;
+	padding:10px;
+	text-transform: uppercase;
+	width: 200px;
+	color: white;
+	background-color: black;  
+	border: none;
+	justify-self: center;
+
+  }
+.submit:hover{
+	background-image: linear-gradient(to bottom right, red, orange, yellow, green);
+	color: black;
+	border: none;
+}
+
+.contact {
+	margin-left: 15%;
+	margin-right: 15%;
+	width: 70%;
+	grid-row-start: 1;
+	justify-content: center;
+}
+
+/* contact form code inspired by https://freefrontend.com/css-contact-forms/ */
+
+/*gallery for albums underneath */
+
+.row {
+  margin: 8px -16px;
+}
+
+  .gallery img:hover{
+	width: 100%;
+	opacity: .5;
+}
+
+
+.row,
+.row > .gallery {
+  padding: 8px;
+}
+
+.gallery {
+	grid-column: 1 / -1;
+	float: left;
+	width: 50%;
+	overflow: hidden;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/*done */
+
+footer{
+	grid-column: 1 / -1;
+	background-color: white;
+	color: black;
+	text-align: center;
+	font-size: 12px;
+	grid-row: -1;
+}
+
+@media (max-width: 1025px){
+	.parallax{
+		display:none;
+	}
+}
+
+@media (min-width: 600px){
+	.header,
+	.main-nav{
+		display:flex;
+	}
+
+	.header{
+		flex-direction: column;
+		align-items: center;
+		width:100%;
+		margin: 0 auto;
+/*		max-width: 1150px;*/
+	}
+
+	.gallery{
+		float: left;
+		width: 33%;
+		overflow: hidden;
+	}
+
+	.gallery img{
+		width: 100%;
+		opacity: 1.0;
+	}
+
+	#home {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto auto;
+}
+
+.love-letter{
+	color: white;
+	background-color: black;
+	grid-row: 3/ 4;
+	grid-column: 1 / -1;
+	padding-bottom: 15px;
+
+}
+
+.love-letter p{
+	line-height: 2em;
+}
+
+.center{
+	text-align: center;
+}
+
+#about{
+	grid-column: 1 / -1;
+	grid-row: 4 / 5;
+}
+
+.about-image{
+	grid-row: 1 / span 1;
+	grid-column: 1 / span 3;
+}
+
+.heading{
+	grid-column: 2 / 3;
+	grid-row: 1;
+}
+
+.hit-the-floor {
+  color: black;
+  font-size: 12em;
+  font-weight: bold;
+  font-family: "Montserrat";
+  text-shadow: 
+    0 1px 0 #ccc, 
+    0 2px 0 #c9c9c9, 
+    0 3px 0 #bbb, 
+    0 4px 0 #b9b9b9, 
+    0 5px 0 #aaa, 
+    0 6px 1px rgba(0,0,0,.1), 
+    0 0 5px rgba(0,0,0,.1), 
+    0 1px 3px rgba(0,0,0,.3), 
+    0 3px 5px rgba(0,0,0,.2), 
+    0 5px 10px rgba(0,0,0,.25), 
+    0 10px 10px rgba(0,0,0,.2), 
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+.hit-the-floor {
+  text-align: center;
+}
+
+.heading h1{
+	background-color: rgba(255, 255, 255, .8);
+	border: 10px solid black;
+	padding: 30px;
+	align-self: center;
+	justify-self: center;
+	justify-content: center;
+	font-size: 1.5em;
+}
+
+#facts {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+
+
+}
+
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+#home {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto auto auto;
+}
+
+#about{
+	grid-column: 2 / span 1;
+	grid-row: 4 / 5;
+}
+
+
+.parallax {
+	background-attachment: fixed;
+	background-image: url("../images/beatles.png");
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	grid-column: 1 / span 3;
+	height: 750px;
+}
+
+.parallax h1{
+	text-shadow: 4px;
+	font-size: 7em;
+	color: white;
+	height: 800px;
+
+}
+
+.parallax h3{
+	text-shadow: 4px;
+	font-size: 2em;
+	padding-top: 250px;
+	color: white;
+	text-align: center;
+
+}
+
+.heading{
+	display: none;
+}
+
+.about-image{
+	display:none;
+}
+
+
+/*gallery desktop*/
+.gallery {
+	width: 25%;
+	overflow: hidden;
+}
+
+
+/*end*/
+
+/*fun facts style*/
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+ol li {
+  counter-increment: my-awesome-counter;
+  display: flex;
+  width: 50%;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  padding: 30px;
+  line-height: 1.5;
+}
+ol li::before {
+  content: "0" counter(my-awesome-counter);
+  font-weight: bold;
+  font-size: 3rem;
+  margin-right: 1rem;
+  font-family: 'Abril Fatface', serif;
+  line-height: 2;
+}
+/*end fun facts style*/
+
+/*flip cards*/
+.band-members {
+	display: grid;
+	grid-template-columns: 50vw 50vw;
+	grid-template-rows: auto auto;
+	margin: 15px;
+}
+
+.john{
+	grid-column: 1;
+	grid-row: 1 / span 1;
+
+}
+
+.paul{
+	grid-column: 2;
+	grid-row: 1 / span 1;
+
+}
+
+.george{
+	grid-column: 1;
+	grid-row: 2 / span 1;
+
+}
+
+.ringo{
+	grid-column: 2;
+	grid-row: 2 / span 1;
+}
+
+
+.flip-card {
+	justify-content: center;
+	padding-left: 70px;
+	background-color: transparent;
+	width: 500px;
+	height: 400px;
+	perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card h1 {
+	font-size: 30px;
+	padding: 15px;
+}
+
+.flip-card p {
+	text-align: left;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card:focus .flip-card-inner {
+	transform: rotateY(180deg);
+    
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  max-width: 500px;
+  max-height: 400px;
+  backface-visibility: hidden;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.flip-card-front {
+  color: black;
+
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+         transform: rotateY(0deg);
+}
+
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+
+   -webkit-transform: rotateY(-180deg);
+         transform: rotateY(-180deg);
+}
+}
+/*end flip cards*/
+
+  .message:hover{
+    background-color: yellow;
+    height: 200px;
+    width:370px;
+  }
+
+  .email:hover{
+	background-color: orange;  
+	height:50px;
+	width:380px;
+   
+  }
+
+  .name:hover{
+	border-radius: .5em;
+    background-color: red;
+    height:50px;
+    width:400px;
+  }
+
+
+
+
+/* contact form code inspired by https://freefrontend.com/css-contact-forms/ */
+
+/*Code inspired by W3schools*/
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none !important;
+    transition: none !important;
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+} 
