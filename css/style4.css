@@ -93,6 +93,24 @@ p{
 	line-height: 1.5;
 }
 
+.center{
+	text-align: center;
+}
+
+.heading{
+	color: white;
+	background-color: black;
+}
+
+.love-letter{
+	color: white;
+	background-color: black;
+	grid-row: 3/ 4;
+	grid-column: 1 / -1;
+	padding-bottom: 15px;
+
+}
+
 h1 {
 	text-align: center;
 	padding-top: 40px;
@@ -354,9 +372,7 @@ footer{
 }
 
 .heading{
-	grid-column: 2 / 3;
-	grid-row: 1;
-}
+	display: none;
 
 .hit-the-floor {
   color: black;
